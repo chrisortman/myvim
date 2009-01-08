@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+filename = ARGV[0]
+line_number = ARGV[1].to_i
+
+cmd = %{spec --drb "#{filename}" -l #{line_number}}
+puts cmd
+system cmd
+exit
+
+lines = File.read(filename).split(/\n/)
+(line_number - 1).downto(0) do |i|
+  if lines[i] =~ /\s*it (".+")/
+    cmd = %{spec "#{filename}" -e "#{$1}"}
+    puts cmd
+    system cmd
+    exit
+  end
+end
