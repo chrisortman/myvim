@@ -1,0 +1,20 @@
+[user]
+	name = Chris Ortman
+	email = chrisortman@gmail.com
+[alias]
+	st = status
+	ci = commit
+	co = checkout	
+[daemon]
+	receivepack = true
+[core]
+	editor = vim
+[svn]
+	addAuthorFrom = true
+	useLogAuthor = true
+[color]
+	ui = always
+	status = always
+	branch = always
+	diff = always
+	interactive = always
