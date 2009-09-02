@@ -1,0 +1,4 @@
+On windows copy to HOME/vimfiles and *nix to ~/.vim
+
+Need to install fuzzy file finder
+gem install --source http://gems.github.com jamis-fuzzy_file_finder
